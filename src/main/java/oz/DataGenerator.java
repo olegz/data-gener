@@ -49,7 +49,7 @@ public class DataGenerator {
 			buffer.append("\n");
 //			String line = buffer.toString();
 			writer.write(buffer.toString());
-			if (i % 1000 == 0){
+			if (i % 10000 == 0){
 				System.out.println("Lines written: " + i);
 			}
 //			System.out.println("Written line: " + i);
