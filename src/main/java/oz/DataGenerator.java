@@ -56,6 +56,6 @@ public class DataGenerator {
 		}
 		
 		writer.close();
-		System.out.println("Written file: " + generatedFile + "; Size: " + fs.getFileStatus(generatedFile).getLen()/1024000000 + "Gb");
+		System.out.println("Written file: " + generatedFile + "; Size: " + ((float)fs.getFileStatus(generatedFile).getLen()/1024000000) + "Gb");
 	}
 }
