@@ -27,10 +27,13 @@ public class DataGenerator {
 		if (args.length > 2){
 			lines = Integer.parseInt(args[2]);
 		}
-		
+		String fileName = "test-file.txt";
+		if (args.length > 3){
+			fileName = args[3];
+		}
 		YarnConfiguration configuration = new YarnConfiguration();
 		FileSystem fs = FileSystem.get(configuration);
-		Path generatedFile = fs.makeQualified(new Path("foo"));
+		Path generatedFile = fs.makeQualified(new Path(fileName));
 		System.out.println("Writing file: " + generatedFile);
 		System.out.println("words per line: " + wordsPerLine);
 		System.out.println("unique values: " + uniqueValues);
